@@ -11,6 +11,15 @@
 	
 }
 
+p.title {
+	font-weight: bold;
+}
+
+p.sub-title {
+	font-style: italic;
+	color: red;
+}
+
 span.code-result {
 	color: red;
 	line-height: 2em;
@@ -21,4 +30,8 @@ span.code-result {
 span.code-explain {
 	color: blue;
 	font-weight: bold;
+}
+
+li {
+	line-height: 1.3em;
 }

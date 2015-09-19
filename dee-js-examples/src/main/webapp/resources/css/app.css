@@ -1,12 +1,24 @@
 @CHARSET "UTF-8";
 
-#treasuremap {
-	width: 500px;
-	height: 500px;
+.section {
+	
 }
 
-#anchor {
+.code {
+	padding: 5px 10px;
+	border: 1px solid #009;
+	font: 1em Courier, monospace;
+	
+}
+
+span.code-result {
 	color: red;
+	line-height: 2em;
+	padding: 5px;
+	border: 1px dotted #aaa;
+}
+
+span.code-explain {
+	color: blue;
 	font-weight: bold;
-	font-size: 2em;
 }

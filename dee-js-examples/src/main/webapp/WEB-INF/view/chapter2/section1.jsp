@@ -117,18 +117,106 @@ var obj = {x: 1};
 "x" in obj; // true
 "z" in obj; // false
 "toString" in obj // true
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_4()">
+</pre>
 
+<p class="sub-title">hasOwnProperty</p>
+<pre class="code">
+var obj = {x: 1};
 obj.hasOwnProperty("x"); // true
 obj.hasOwnProperty("z"); //false
 obj.hasOwnProperty("toString"); // false
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_5()">
+</pre>
 
+
+<p class="sub-title">propertyIsEnumerable</p>
+<pre class="code">
 var obj = inherit({y: 1});
 obj.x = 1;
 obj.propertyIsEnumerable("x"); // true
 obj.propertyIsEnumerable("y"); // false: y is inherited, not own
 obj.propertyIsEnumerable("toString"); // false: is not enumerable
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_6()">
+</pre>
 
-<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_4()">
+<p class="sub-title">Example</p>
+<pre class="code">
+function extend(target, source) {
+	for(var att in source) {
+		target[att] = source[att];
+	}
+	return target;
+}
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+extend(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_7()">
+</pre>
+
+<pre class="code">
+function merge(target, source) {
+	for(var att in source) {
+		if(target.isOwnProperty("att")) continue;
+		target[att] = source[att];
+	}
+	return target;
+}
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+merge(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_8()">
+</pre>
+
+<pre class="code">
+function restrict(target, source) {
+	var obj = extend({}, target);
+	for(var att in target) {
+		if(!(att in source)) {
+			delete obj[att];
+		}
+	}
+	return obj;
+}
+
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+restrict(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_9()">
+</pre>
+
+<pre class="code">
+function subtract(target, source) {
+	var obj = extend({}, target);
+	for(var att in source) {
+		delete obj[att];
+	}
+	return obj;
+}
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+subtract(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_10()">
+</pre>
+
+<pre class="code">
+function union(target, source) {
+	return extend(extend({}, target), source);
+}
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+union(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_11()">
+</pre>
+
+<pre class="code">
+function intersection(target, source) {
+	return restrict(extend({}, target), source);
+}
+var source = inherit({x: 1, y:2});
+var target = inherit({x: 1, z:2});
+intersection(target, source);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_12()">
 </pre>
 
 </div>

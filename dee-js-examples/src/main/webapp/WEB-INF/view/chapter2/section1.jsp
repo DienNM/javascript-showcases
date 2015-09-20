@@ -219,4 +219,76 @@ intersection(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_12()">
 </pre>
 
+
+
+	<p class="title">Setter & Getter</p>
+	<ul>
+		<li><strong>Object.getOwnPropertyDescriptor()</strong>: get property attributes, such <em>value, writable, enumerable, configurable</em></li>
+		<li><strong>Object.defineProperty</strong>: defines property with specifying attributes</li>
+	</ul>
+	<p>Get own properties attributes, using Object.getOwnPropertyDescriptor()</p>
+
+<p class="sub-title">Get Property Attributes</p>
+<pre class="code">
+var student = {
+	name: "DienNM",
+	email: "nmdien61@gmail.com",
+	get clazz() {
+		return "class1";
+	}
+};
+console.log(Object.getOwnPropertyDescriptor(student, "name"));
+console.log(Object.getOwnPropertyDescriptor(student, "email"));
+console.log(Object.getOwnPropertyDescriptor(student, "clazz"));
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_13()">
+</pre>
+
+<p class="sub-title">Defined Property with specific Attributes</p>
+<pre class="code">
+var student = {
+	email: "nmdien61@gmail.com"
+};
+
+Object.defineProperty(student, "clazz", {
+	value : "class1",
+	writable: true,
+	enumerable: false,
+	configurable: false
+});
+
+alert("Object.keys(student) = " + (Object.keys(student)) );
+
+Object.defineProperty(student, "name", {
+	value : "class1",
+	writable: true,
+	enumerable: true,
+	configurable: false
+});
+
+alert("Object.keys(student) = " + (Object.keys(student)) );
+
+alert("student.clazz = " + (student.clazz) + "\n" + 
+	"delete student.email = " + (delete student.email) + "\n" +
+	"delete student.clazz = " + (delete student.clazz));
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_14()">
+</pre>
+
+
+<p class="sub-title">Defined Properties with specific Attributes</p>
+<pre class="code">
+var student = Object.defineProperties({}, {
+	{
+		"clazz" : {value : "class1", writable: true, enumerable: false, configurable: false}
+		"email" : {value : "nmdien61@gmail.com", writable: true, enumerable: true, configurable: true}
+	}
+});
+
+alert("Object.keys(student) = " + (Object.keys(student)) );
+
+alert("student.clazz = " + (student.clazz) + "\n" + 
+	"delete student.email = " + (delete student.email) + "\n" +
+	"delete student.clazz = " + (delete student.clazz));
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_15()">
+</pre>
+
 </div>

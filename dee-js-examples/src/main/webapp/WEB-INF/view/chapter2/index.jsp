@@ -14,10 +14,14 @@
     <h1>Chapter 2</h1>
     <ul>
         <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a> <em>Object Attributes</em></li>
+        <li><a href="#section3">Section 3</a> <em>Serialization</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
+    <%@ include file="section2.jsp" %>
+    <%@ include file="section3.jsp" %>
 
 </body>
 </html>

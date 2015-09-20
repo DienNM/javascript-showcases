@@ -208,3 +208,56 @@ function exampleCS1_12() {
 
 	alert(result);
 }
+
+
+function exampleCS1_13() {
+	var student = {
+		email: "nmdien61@gmail.com",
+		get clazz() {
+			return "class1";
+		}
+	};
+	console.log(Object.getOwnPropertyDescriptor(student, "email"));
+	console.log(Object.getOwnPropertyDescriptor(student, "clazz"));
+}
+
+function exampleCS1_14() {
+	var student = {
+		email: "nmdien61@gmail.com"
+	};
+
+	Object.defineProperty(student, "clazz", {
+		value : "class1",
+		writable: true,
+		enumerable: false,
+		configurable: false
+	});
+
+	alert("Object.keys(student) = " + (Object.keys(student)) );
+
+	Object.defineProperty(student, "name", {
+		value : "class1",
+		writable: true,
+		enumerable: true,
+		configurable: false
+	});
+
+	alert("Object.keys(student) = " + (Object.keys(student)) );
+
+	alert("student.clazz = " + (student.clazz) + "\n" + 
+		"delete student.email = " + (delete student.email) + "\n" +
+		"delete student.clazz = " + (delete student.clazz));
+}
+
+function exampleCS1_15() {
+	var student = Object.defineProperties({}, {
+		"clazz" : {value : "class1", writable: true, enumerable: false, configurable: false},
+		"email" : {value : "nmdien61@gmail.com", writable: true, enumerable: true, configurable: true}
+	});
+
+	alert("Object.keys(student) = " + (Object.keys(student)) );
+
+	alert("student.clazz = " + (student.clazz) + "\n" + 
+		"delete student.email = " + (delete student.email) + "\n" +
+		"delete student.clazz = " + (delete student.clazz));
+}

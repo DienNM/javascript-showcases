@@ -11,15 +11,13 @@
 </head>
 <body>
     
-    <h1>Chapter 2</h1>
+    <h1>Chapter 3</h1>
     <ul>
-        <li><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section1">Section 1</a> <em>Array</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
-    <%@ include file="section2.jsp" %>
 
 </body>
 </html>

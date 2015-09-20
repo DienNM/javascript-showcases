@@ -4,6 +4,12 @@
 	
 }
 
+h3 {
+	color: blue;
+	background-color: #bbc;
+	padding: 3px 10px;
+}
+
 .code {
 	padding: 5px 10px;
 	border: 1px solid #009;

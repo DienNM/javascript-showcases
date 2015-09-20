@@ -19,8 +19,10 @@
 var user = { name : ""};
 var student = Object.create(user);
 
-alert("user.isPrototypeOf(student) = " + (user.isPrototypeOf(student)) + "\n" +
-	"Object.prototype.isPrototypeOf(student) = " + (Object.prototype.isPrototypeOf(student)));
+alert(
+	"user.isPrototypeOf(student) = " + (user.isPrototypeOf(student)) + "\n" +
+	"Object.prototype.isPrototypeOf(student) = " + (Object.prototype.isPrototypeOf(student))
+);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS2_1()">
 </pre>
 
@@ -32,13 +34,15 @@ function classof(obj) {
 	return Object.prototype.toString.call(obj).slice(8, -1);
 }
 
-alert("classof(null) = " + (classof(null)) + "\n" + 
-		"classof(1) = " + (classof(1)) + "\n" +
-		"classof(new Array()) = " + (classof(new Array())) + "\n" +
-		"classof(new Date()) = " + (classof(new Date())) + "\n" +
-		"classof('test') = " + (classof("test")) + "\n" +
-		"classof({}) = " + (classof({})) + "\n" +
-		"classof([]) = " + (classof([])));
+alert(
+	"classof(null) = " + (classof(null)) + "\n" + 
+	"classof(1) = " + (classof(1)) + "\n" +
+	"classof(new Array()) = " + (classof(new Array())) + "\n" +
+	"classof(new Date()) = " + (classof(new Date())) + "\n" +
+	"classof('test') = " + (classof("test")) + "\n" +
+	"classof({}) = " + (classof({})) + "\n" +
+	"classof([]) = " + (classof([]))
+);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS2_2()">
 </pre>
 

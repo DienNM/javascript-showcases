@@ -18,6 +18,7 @@
     <hr>
     
     <%@ include file="section1.jsp" %>
+    <%@ include file="section2.jsp" %>
 
 </body>
 </html>

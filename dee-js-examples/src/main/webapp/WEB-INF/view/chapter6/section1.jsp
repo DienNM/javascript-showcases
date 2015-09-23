@@ -61,10 +61,40 @@ document.location = "#section1";
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_6()">
 </pre>
 
-
 <pre class="code">
 document.location = "?search=1";
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_7()">
+</pre>
+
+	<p class="title">Browser History</p>
+<pre class="code">
+See console.log
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_8()">
+</pre>
+
+	<p class="sub-title">back() / forward()</p>
+<pre class="code">
+window.history.back();
+window.history.forward();
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_9()">
+</pre>
+
+	<p class="sub-title">go(integer)</p>
+<pre class="code">
+window.history.go(-1);
+window.history.go(-1);
+window.history.go(2);
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_10()">
+</pre>
+
+
+	<p class="title">Browser and Screen Information</p>
+<pre class="code">
+window.navigator.appName = <span id = "wn_appName"></span>
+window.navigator.appVersion = <span id = "wn_appVersion"></span>
+window.navigator.userAgent = <span id = "wn_userAgent"></span>
+window.navigator.platform = <span id = "wn_platform"></span>
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_11()">
 </pre>
 
 

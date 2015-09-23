@@ -63,3 +63,32 @@ function exampleJS6_6() {
 function exampleJS6_7() {
 	document.location = "?search=1";
 }
+
+
+function exampleJS6_8() {
+	for(var p in window.history) {
+		console.log("Property: " + p + " = " + window.history[p]);
+	}
+}
+
+
+function exampleJS6_9() {
+	window.history.back();
+	window.history.forward();
+}
+
+
+function exampleJS6_10() {	
+	window.history.go(-1);
+	window.history.go(-1);
+	window.history.go(2);
+}
+
+function exampleJS6_11() {	
+
+	var win = window.open("http://domain.com/page1");
+     win = window.open("http://domain.com/page2");
+
+	document.getElementById("wn_appName").innerText = window.navigator.appName;
+	
+}

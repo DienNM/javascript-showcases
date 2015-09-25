@@ -3,10 +3,10 @@
 
 <div>
     <h2><a name = "section1">Section 1</a></h2>
-
     <h3>Objects</h3>
+
     <div class = "section">
-    	<p class="sub-title">Object attributes</p>
+    	<p class="sub-title">Object Attributes</p>
     	<ul>
     		<li><strong>prototype</strong>: is a reference to another object from which properties are inherited</li>
     		<li><strong>class</strong>: is a string that categorizes the type of an object</li>
@@ -22,17 +22,25 @@
 
     	<p class="sub-title">Clarify Javascript Objects/Properties</p>
     	<ul>
-    		<li><strong>Native Object</strong>: defined by ECMAScript; Arrays, Functions, Dates, RegExps</li>
-    		<li><strong>Host Object</strong>: defined by host environment (web browser) within which the JavaScript interpreter is embedded. HTMLElement objects</li>
-    		<li><strong>User-Defined Object</strong>: created by the execution of JavaScript code</li>
-    		<li></li>
-    		<li><strong>Own property</strong>: is a property defined directly on an Object</li>
-    		<li><strong>Inherited property</strong>: is a property defined by an object’s prototype object</li>
+    		<li>Class Classification</li>
+    		<ul>
+    			<li><strong>Native Object</strong>: defined by ECMAScript; Arrays, Functions, Dates, RegExps</li>
+	    		<li><strong>Host Object</strong>: defined by host environment (web browser) within which the JavaScript interpreter is embedded. HTMLElement objects</li>
+	    		<li><strong>User-Defined Object</strong>: created by the execution of JavaScript code</li>
+    		</ul>
+    		<li>Property Classification</li>
+	    	<ul>
+	    		<li><strong>Own property</strong>: is a property defined directly on an Object</li>
+    			<li><strong>Inherited property</strong>: is a property defined by an object’s prototype object</li>
+	    	</ul>
+    		
     	</ul>
     	<hr>
 
     	<p class="title">Create object with <strong><em>literals</em></strong></p>
-<pre class="code">var empty = {};
+
+<pre class="code">
+var empty = {};
 var point = { x:0, y:0 };
 var point2 = { x: point.x, y: point.y+1 };
 var book = {
@@ -49,7 +57,7 @@ var book = {
 
 
 
-	<p class="title">Create object with <strong><em>news</em></strong></p>
+	<p class="title">Create object with <strong><em>New</em></strong></p>
 	<p>The new keyword must be followed by a function invocation => constructor</p>
 <pre class="code">
 var date = new Date();
@@ -57,6 +65,7 @@ var array = new Array();
 var obj = new Object();
 var regexp = new RegExp("js");
 </pre>
+
 
 
 	<p class="title">Create object with <strong><em>prototype</em></strong></p>
@@ -99,8 +108,7 @@ function inherit(p) {
 }
 
 var obj = inherit({ x : 1, y : 2});
-
-<span class="code-result">Result> obj.x </span> <input value="check" type="button" onclick="exampleCS1_3()">
+<span class="code-result">Result> obj = ? </span> <input value="check" type="button" onclick="exampleCS1_3()">
 </pre>
 
 
@@ -111,7 +119,8 @@ var obj = inherit({ x : 1, y : 2});
 		<li><strong>propertyIsEnumerable()</strong>: (refines of hasOwnProperty()) true if the named property is an own property and enumerable attribute is true. Built-in property is not enumerable</li>
 	</ul>
 
-<p class="sub-title">in</p>
+
+	<p class="sub-title">in</p>
 <pre class="code">
 var obj = {x: 1};
 "x" in obj; // true
@@ -120,7 +129,8 @@ var obj = {x: 1};
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_4()">
 </pre>
 
-<p class="sub-title">hasOwnProperty</p>
+
+	<p class="sub-title">hasOwnProperty</p>
 <pre class="code">
 var obj = {x: 1};
 obj.hasOwnProperty("x"); // true
@@ -130,7 +140,8 @@ obj.hasOwnProperty("toString"); // false
 </pre>
 
 
-<p class="sub-title">propertyIsEnumerable</p>
+
+	<p class="sub-title">propertyIsEnumerable</p>
 <pre class="code">
 var obj = inherit({y: 1});
 obj.x = 1;
@@ -140,7 +151,8 @@ obj.propertyIsEnumerable("toString"); // false: is not enumerable
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_6()">
 </pre>
 
-<p class="sub-title">Example</p>
+
+	<p class="sub-title">Example extend</p>
 <pre class="code">
 function extend(target, source) {
 	for(var att in source) {
@@ -148,12 +160,15 @@ function extend(target, source) {
 	}
 	return target;
 }
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 extend(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_7()">
 </pre>
-
+	
+	<p class="sub-title">Example Merge</p>
 <pre class="code">
 function merge(target, source) {
 	for(var att in source) {
@@ -162,12 +177,16 @@ function merge(target, source) {
 	}
 	return target;
 }
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 merge(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_8()">
 </pre>
 
+
+	<p class="sub-title">Example Restrict</p>
 <pre class="code">
 function restrict(target, source) {
 	var obj = extend({}, target);
@@ -178,13 +197,16 @@ function restrict(target, source) {
 	}
 	return obj;
 }
-
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 restrict(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_9()">
 </pre>
 
+
+	<p class="sub-title">Example Subtract</p>
 <pre class="code">
 function subtract(target, source) {
 	var obj = extend({}, target);
@@ -193,26 +215,36 @@ function subtract(target, source) {
 	}
 	return obj;
 }
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 subtract(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_10()">
 </pre>
 
+
+	<p class="sub-title">Example Union</p>
 <pre class="code">
 function union(target, source) {
 	return extend(extend({}, target), source);
 }
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 union(target, source);
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_11()">
 </pre>
 
+
+	<p class="sub-title">Example intersection</p>
 <pre class="code">
 function intersection(target, source) {
 	return restrict(extend({}, target), source);
 }
+</pre>
+<pre class="code">
 var source = inherit({x: 1, y:2});
 var target = inherit({x: 1, z:2});
 intersection(target, source);
@@ -220,8 +252,26 @@ intersection(target, source);
 </pre>
 
 
-
 	<p class="title">Setter & Getter</p>
+
+<pre class="code">
+var obj = {
+	prop1 : 1,
+	get prop2() {
+		return this.prop1 * 10;
+	},
+	set prop2(value) {
+		this.prop1 = value;
+	}
+};
+
+alert(obj.prop2);
+obj.prop2 = 10
+alert(obj.prop2);
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleJS1_13_0()">
+</pre>
+
+
 	<ul>
 		<li><strong>Object.getOwnPropertyDescriptor()</strong>: get property attributes, such <em>value, writable, enumerable, configurable</em></li>
 		<li><strong>Object.defineProperty</strong>: defines property with specifying attributes</li>
@@ -231,15 +281,18 @@ intersection(target, source);
 <p class="sub-title">Get Property Attributes</p>
 <pre class="code">
 var student = {
-	name: "DienNM",
 	email: "nmdien61@gmail.com",
 	get clazz() {
 		return "class1";
+	},
+	set name(value) {
 	}
 };
-console.log(Object.getOwnPropertyDescriptor(student, "name"));
+</pre>
+<pre class="code">
 console.log(Object.getOwnPropertyDescriptor(student, "email"));
 console.log(Object.getOwnPropertyDescriptor(student, "clazz"));
+console.log(Object.getOwnPropertyDescriptor(student, "name"));
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_13()">
 </pre>
 
@@ -274,7 +327,7 @@ alert("student.clazz = " + (student.clazz) + "\n" +
 </pre>
 
 
-<p class="sub-title">Defined Properties with specific Attributes</p>
+	<p class="sub-title">Defined Properties with specific Attributes</p>
 <pre class="code">
 var student = Object.defineProperties({}, {
 	{
@@ -289,6 +342,35 @@ alert("student.clazz = " + (student.clazz) + "\n" +
 	"delete student.email = " + (delete student.email) + "\n" +
 	"delete student.clazz = " + (delete student.clazz));
 <span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleCS1_15()">
+</pre>
+
+	<p class="title">Determine Object's Prototype</p>
+<pre class="code">
+var array = new Array();
+var customArray = Object.create(array);
+
+alert("customArray.isPrototypeOf(array) : " + (customArray.isPrototypeOf(array)));
+alert("array.isPrototypeOf(customArray) : " + (array.isPrototypeOf(customArray)));
+
+alert("customArray instanceof array : " + (customArray instanceof Array));
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleJS1_16()">
+</pre>
+
+	<p class="title">Classof</p>
+<pre class="code">
+function classof(o) {
+	if (o === null) return "Null";
+	if (o === undefined) return "Undefined";
+	return Object.prototype.toString.call(o).slice(8,-1);
+}
+</pre>
+<pre class="code">
+alert("classof(null) = " + classof(null));
+alert("classof(undefined) = " + classof(undefined));
+alert("classof([]) = " + classof([]]));
+alert("classof({}) = " + classof({}}));
+alert("classof(new Date()) = " + classof(new Date()));
+<span class="code-result">Result> </span> <input value="check" type="button" onclick="exampleJS1_17()">
 </pre>
 
 </div>

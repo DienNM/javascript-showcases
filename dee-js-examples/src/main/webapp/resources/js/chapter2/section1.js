@@ -210,15 +210,41 @@ function exampleCS1_12() {
 }
 
 
+/** 
+
+------------------------------------------------**/
+
+function exampleJS1_13_0() {
+	var obj = {
+
+		prop1 : 1,
+
+		get prop2() {
+			return this.prop1 * 10;
+		},
+		set prop2(value) {
+			this.prop1 = value;
+		}
+	};
+	alert(obj.prop2);
+	obj.prop2 = 10;
+	alert(obj.prop2);
+}
+
+
+
 function exampleCS1_13() {
 	var student = {
 		email: "nmdien61@gmail.com",
 		get clazz() {
 			return "class1";
+		},
+		set name(value) {
 		}
 	};
 	console.log(Object.getOwnPropertyDescriptor(student, "email"));
 	console.log(Object.getOwnPropertyDescriptor(student, "clazz"));
+	console.log(Object.getOwnPropertyDescriptor(student, "name"));
 }
 
 function exampleCS1_14() {
@@ -260,4 +286,29 @@ function exampleCS1_15() {
 	alert("student.clazz = " + (student.clazz) + "\n" + 
 		"delete student.email = " + (delete student.email) + "\n" +
 		"delete student.clazz = " + (delete student.clazz));
+}
+
+
+function exampleJS1_16() {
+	var array = new Array();
+
+	var customArray = Object.create(array);
+	alert("customArray.isPrototypeOf(array) : " + (customArray.isPrototypeOf(array)));
+	alert("array.isPrototypeOf(customArray) : " + (array.isPrototypeOf(customArray)));
+
+	alert("customArray instanceof array : " + (customArray instanceof Array));
+}
+
+function classof(o) {
+	if (o === null) return "Null";
+	if (o === undefined) return "Undefined";
+	return Object.prototype.toString.call(o).slice(8,-1);
+}
+
+function exampleJS1_17() {
+	alert("classof(null) = " + classof(null));
+	alert("classof(undefined) = " + classof(undefined));
+	alert("classof([]) = " + classof([]));
+	alert("classof({}) = " + classof({}));
+	alert("classof(new Date()) = " + classof(new Date()));
 }

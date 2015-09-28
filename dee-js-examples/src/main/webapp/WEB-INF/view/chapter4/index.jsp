@@ -12,8 +12,10 @@
 <body>
     
     <h1>Chapter 4</h1>
+    <h3>Functions</h3>
     <ul>
         <li><a href="#section1">Section 1</a> <em>Array</em></li>
+        <li><a href="#section2">Section 2</a></li>
     </ul>
     <hr>
     

@@ -7,7 +7,7 @@ function exampleOptionalArgs(p1, /** optional **/ p2) {
 	return p1 + p2;
 }
 
-function exampleCS42_1() {
+function exampleJS42_1() {
 	alert(exampleOptionalArgs(2));
 	alert(exampleOptionalArgs(2, 3));
 }
@@ -21,7 +21,7 @@ function exampleArgsObj(/* ... */) {
 	return sum;
 }
 
-function exampleCS42_2() {
+function exampleJS42_2() {
 	alert(exampleArgsObj(1,2,3));
 	alert(exampleArgsObj(1,2,3,4,5));
 }
@@ -33,12 +33,12 @@ function changeArgs(a) {
 	alert("a = " + a);
 }
 
-function exampleCS42_3() {
+function exampleJS42_3() {
 	changeArgs(1);
 }
 
 
-function exampleCS42_4() {
+function exampleJS42_4() {
 	var callee1 = function(a) {
 		if(a <= 1) return 1;
 		return a * arguments.callee(a - 1); 
@@ -55,7 +55,7 @@ function checkscope() {
 	return f();
 }
 
-function exampleCS42_5() {
+function exampleJS42_5() {
 	alert(checkscope());
 }
 
@@ -66,7 +66,7 @@ function checkscope1() {
 	return f;
 }
 
-function exampleCS42_6() {
+function exampleJS42_6() {
 	alert(checkscope1()());
 }
 
@@ -81,14 +81,14 @@ function counter1() {
 }
 
 
-function exampleCS42_7() {
+function exampleJS42_7() {
 	counter1().count();
 	counter1().count();
 
 }
 
 
-function exampleCS42_8() {
+function exampleJS42_8() {
 	var counter = counter1();
 	counter.count();
 	counter.count();
@@ -96,5 +96,22 @@ function exampleCS42_8() {
 
 
 
+function counterUsingGetterSetter(n) {
+	return {
+		get count() {
+			return ++n;
+		},
+		set count(m) {
+			n = m;;
+		}
 
+	};
+}
 
+function exampleJS42_9() {
+	var counter = counterUsingGetterSetter(0);
+	alert(counter.count);
+	alert(counter.count);
+	counter.count = 10;
+	alert(counter.count);
+}

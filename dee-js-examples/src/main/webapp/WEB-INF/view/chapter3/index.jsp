@@ -15,12 +15,14 @@
         <li><a href="#section1">Section 1</a> <em>Array</em></li>
         <li><a href="#section2">Section 2</a> <em>Array Methods</em></li>
         <li><a href="#section3">Section 3</a> <em>Array Methods for ECMAScript 5</em></li>
+        <li><a href="#section4">Section 4</a> <em>Array Type</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
     <%@ include file="section2.jsp" %>
     <%@ include file="section3.jsp" %>
+    <%@ include file="section4.jsp" %>
 
 </body>
 </html>

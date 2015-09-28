@@ -10,14 +10,17 @@
     <title>JS Example</title>
 </head>
 <body>
-    
-    <h1>Chapter 3</h1>
+    <h1>Chapter 3 - Array</h1>
     <ul>
         <li><a href="#section1">Section 1</a> <em>Array</em></li>
+        <li><a href="#section2">Section 2</a> <em>Array Methods</em></li>
+        <li><a href="#section3">Section 3</a> <em>Array Methods for ECMAScript 5</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
+    <%@ include file="section2.jsp" %>
+    <%@ include file="section3.jsp" %>
 
 </body>
 </html>

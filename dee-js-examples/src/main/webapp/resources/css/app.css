@@ -19,11 +19,13 @@ h3 {
 
 p.title {
 	font-weight: bold;
+	font-size: 1.3em;
 }
 
 p.sub-title {
 	font-style: italic;
 	color: red;
+	font-size: 1.2em;
 }
 
 span.code-result {

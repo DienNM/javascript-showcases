@@ -117,4 +117,50 @@ customer.point = 21;
 alert("After Set point = 21: " + customer.getRange());
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS54_2()">
 </pre>
+
+
+
+	<p class="sub-title">Example of hierachy</p>
+<pre class="code">
+function CrawlData(site, type) {
+	this.site = site;
+	this.type = type;
+}
+
+CrawlData.prototype = {
+	crawl: function () {
+		alert("Crawl the site: " + this.site + "; type = " + this.type);
+	}
+}
+</pre>
+<pre class="code">
+function EpisodeCrawlData(site, type) {
+	CrawlData.apply(this, arguments);
+}
+
+EpisodeCrawlData.prototype = inherit(CrawlData.prototype);
+EpisodeCrawlData.prototype.constructor = EpisodeCrawlData;
+EpisodeCrawlData.prototype.crawl = function() {
+	alert("Not support now");
+}
+</pre>
+<pre class="code">	
+function SeriesCrawlData(site, type) {
+	CrawlData.apply(this, arguments);
+}
+
+SeriesCrawlData.prototype = inherit(CrawlData.prototype);
+SeriesCrawlData.prototype.constructor = SeriesCrawlData;
+
+</pre>
+<pre class="code">
+var episode = new EpisodeCrawlData("http://imdb.com", "Episode");
+var series = new SeriesCrawlData("http://imdb.com", "Series");
+
+episode.crawl(); // Call overriden
+series.crawl();
+CrawlData.prototype.crawl.apply(episode, null); // call parent
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS54_3()">
+</pre>
+
 </div>

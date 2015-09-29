@@ -96,3 +96,44 @@ function exampleJS54_2() {
 	alert("emp2@gmail.com's age = " + employee1.age);
 	alert("customer1@gmail.com's age = " + customer.age);
 }
+
+/**
+--------------------------------------------------------**/
+
+function CrawlData(site, type) {
+	this.site = site;
+	this.type = type;
+}
+
+CrawlData.prototype = {
+	crawl: function () {
+		alert("Crawl the site: " + this.site + "; type = " + this.type);
+	}
+}
+
+function EpisodeCrawlData(site, type) {
+	CrawlData.apply(this, arguments);
+}
+
+EpisodeCrawlData.prototype = inherit(CrawlData.prototype);
+EpisodeCrawlData.prototype.constructor = EpisodeCrawlData;
+EpisodeCrawlData.prototype.crawl = function() {
+	alert("Not support now");
+}
+
+function SeriesCrawlData(site, type) {
+	CrawlData.apply(this, arguments);
+}
+
+SeriesCrawlData.prototype = inherit(CrawlData.prototype);
+SeriesCrawlData.prototype.constructor = SeriesCrawlData;
+
+function exampleJS54_3() {
+	var episode = new EpisodeCrawlData("http://imdb.com", "Episode");
+	var series = new SeriesCrawlData("http://imdb.com", "Series");
+
+	episode.crawl();
+	series.crawl();
+
+	CrawlData.prototype.crawl.apply(episode, null);
+}

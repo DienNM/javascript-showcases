@@ -43,3 +43,7 @@ span.code-explain {
 li {
 	line-height: 1.5em;
 }
+
+.red {
+	color: red;
+}

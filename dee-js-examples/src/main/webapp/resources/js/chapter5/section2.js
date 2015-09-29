@@ -78,11 +78,8 @@ function enumeration(namesToValues) {
 		enumeration[item] = e;
 		enumeration.values.push(e);
 	}
-
 	return enumeration;
 }
-
-
 
 function exampleJS52_2() {
 	var Gender = enumeration({MALE : "M", FEMALE : "F"});

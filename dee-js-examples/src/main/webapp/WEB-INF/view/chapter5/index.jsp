@@ -17,6 +17,7 @@
         <li><a href="#section2">Section 2</a> <em>Object Oriented Techniques</em></li>
         <li><a href="#section3">Section 3</a> <em>Class and Type</em></li>
         <li><a href="#section4">Section 4</a> <em>Subclass</em></li>
+        <li><a href="#section5">Section 5</a> <em>Module</em></li>
     </ul>
     <hr>
     
@@ -24,6 +25,7 @@
     <%@ include file="section2.jsp" %>
     <%@ include file="section3.jsp" %>
     <%@ include file="section4.jsp" %>
+    <%@ include file="section5.jsp" %>
 
 </body>
 </html>

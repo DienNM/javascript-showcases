@@ -16,11 +16,13 @@
     <ul>
         <li><a href="#section1">Section 1</a> <em>Array</em></li>
         <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a> <em>Function Programming</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
     <%@ include file="section2.jsp" %>
+    <%@ include file="section3.jsp" %>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <script type="text/javascript" src='<c:url value="/resources/js/chapter4/section2.js" />'></script>
 <div>
-    <h2><a name = "section1">Section 2</a></h2>
+    <h2><a name = "section2">Section 2</a></h2>
 
     <h3>Function Arguments & Parameters</h3>
     <div class = "section">
@@ -129,8 +129,6 @@ counter.count = 10;
 alert(counter.count);
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS42_9()">
 </pre>
-
-
 
 
 </div>

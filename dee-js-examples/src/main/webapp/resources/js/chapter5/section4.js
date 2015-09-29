@@ -137,3 +137,41 @@ function exampleJS54_3() {
 
 	CrawlData.prototype.crawl.apply(episode, null);
 }
+
+/**
+---------------------------------------------------------**/
+
+function Animal(name, type, voice) {
+	this.name = name;
+	this.type = type;
+	this.voice = voice;
+}
+
+Animal.prototype = {
+	speak : function() {
+		alert(this.name + "[" + this.type + "] " + " is speaking: " + this.voice);
+	}
+}
+
+function defineSubclass(superclass) {
+	var constructor = function() {
+		superclass.apply(this, arguments);
+	};
+
+	var proto = constructor.prototype = inherit(superclass.prototype);
+	proto.constructor = constructor;
+	proto.speak = function() {
+		superclass.prototype.speak.apply(this, arguments);
+	}; 
+	return constructor;
+}
+
+function exampleJS54_4() {
+	var Cat = defineSubclass(Animal);
+	var cat = new Cat("Mimi", "Cat", "Meo meo");
+	cat.speak();
+
+	var Dog = defineSubclass(Animal);
+	var dog = new Dog("Kiki", "Dog", "Gai Gau");
+	dog.speak();
+}

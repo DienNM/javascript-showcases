@@ -163,4 +163,44 @@ CrawlData.prototype.crawl.apply(episode, null); // call parent
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS54_3()">
 </pre>
 
+
+	<p class="sub-title">Example 2</p>
+<pre class="code">
+function Animal(name, type, voice) {
+	this.name = name;
+	this.type = type;
+	this.voice = voice;
+}
+Animal.prototype = {
+	speak : function() {
+		alert(this.name + "[" + this.type + "] " + " is speaking: " + this.voice);
+	}
+}
+</pre>
+<pre class="code">
+function defineSubclass(superclass) {
+	var constructor = function() {
+		superclass.apply(this, arguments);
+	};
+
+	var proto = constructor.prototype = inherit(superclass.prototype);
+	proto.constructor = constructor;
+	proto.speak = function() {
+		superclass.prototype.speak.apply(this, arguments);
+	}; 
+	return constructor;
+}
+</pre>
+
+<pre class="code">
+var Cat = defineSubclass(Animal);
+var cat = new Cat("Mimi", "Cat", "Meo meo");
+cat.speak();
+
+var Dog = defineSubclass(Animal);
+var dog = new Dog("Kiki", "Dog", "Gai Gau");
+dog.speak();
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS54_4()">
+</pre>
+
 </div>

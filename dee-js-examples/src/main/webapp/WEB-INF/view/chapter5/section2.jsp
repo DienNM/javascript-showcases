@@ -59,4 +59,47 @@ alert("Contains test3: " + (set.contain("test3")));
 </pre>
 
 
+
+
+	<p class="title">Enumeration</p>
+<pre class="code">
+function inherit(p) {
+	if(p == null) throw TypeError();
+	if(p == undefined) throw TypeError();
+	if(Object.create) return Object.create(p);
+
+	function f() {};
+	f.prototype = p;
+	return new f();
+}
+
+</pre>
+<pre class="code">
+function enumeration(namesToValues) {
+	var enumeration = function() { throw "Cannot Instantiate Enumeration"};
+	var proto = enumeration.prototype = {
+		constructor : enumeration,
+		toString	: function() { return this.name; },
+		valueOf		: function() { return this.value; }
+	};
+
+	enumeration.values = [];
+	for(var item in namesToValues) {
+		var e = inherit(proto);
+		e.name = item;
+		e.value = namesToValues[item];
+		enumeration[item] = e;
+		enumeration.values.push(e);
+	}
+
+	return enumeration;
+}
+</pre>
+<pre class="code">
+var Gender = enumeration({MALE : "M", FEMALE : "F"});
+alert("Gender.MALE.toString(): " + Gender.MALE.toString());
+alert("Gender.MALE.valueOf(): " + Gender.MALE.valueOf());
+<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS52_2()">
+</pre>
+
 </div>

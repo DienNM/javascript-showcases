@@ -14,11 +14,16 @@
     <h1>Chapter 5</h1>
     <ul>
         <li><a href="#section1">Section 1</a> <em>Class</em></li>
+        <li><a href="#section2">Section 2</a> <em>Object Oriented Techniques</em></li>
+        <li><a href="#section3">Section 3</a> <em>Class and Type</em></li>
+        <li><a href="#section4">Section 4</a> <em>Subclass</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
     <%@ include file="section2.jsp" %>
+    <%@ include file="section3.jsp" %>
+    <%@ include file="section4.jsp" %>
 
 </body>
 </html>

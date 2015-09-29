@@ -2,6 +2,18 @@
 	DEE - JS Example - Chapter 05 - Section 1
 **/
 
+function inherit(p) {
+	if(p == null) {
+		throw TypeError();
+	}
+	if(Object.create) return Object.create(p);
+	var type = typeof p;
+	if(type !== 'function' && type !== 'object') throw TypeError();
+
+	function f() {};
+	f.prototype = p;
+	return new f();
+}
 
 function Student(name, email, hobbies) {
 	this.name = name;

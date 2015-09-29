@@ -3,6 +3,7 @@
     <h2><a name = "section1">Section 1</a></h2>
 
     <h3>Class</h3>
+    
     <div class = "section">
     	<p class="title">Class and Constructor</p>
     	<p>Constructor is a function is used to initialize newly created object. Using <strong>NEW</strong> keyword. The <strong>prototype</strong> property is used as as the prototype of new object</p>

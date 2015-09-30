@@ -95,5 +95,45 @@ var pattern = new RegExp("s$");
 <img src="<c:url value="/resources/images/regexp-grouping.png" />">
 </pre>
 
+
+
+<p class="title">Specifying Match Position</p>
+	<ul>
+		<li>^ : Match the beginning of string</li>
+		<li>$ : Match the end of string</li>
+		<li>\b \B</li>
+		<li>\b \B</li>
+		<li>(?= .. ): <em>enclosed characters must match</em></li>
+		<li>(?! ...): which specifies that the following characters must not match</li>
+	</ul>
+<pre class="code">
+<span class="code-explain">/^javascript/</span>: Matched with "javascript", "javascript test"
+<span class="code-explain">/^java(?=\s)\w*/</span>: Matched with "java is a language"
+</pre>
+
+<pre class="code">
+<img src="<c:url value="/resources/images/regexp-matching-position.png" />">
+</pre>
+
+
+
+
+<p class="title">Flat</p>
+	<ul>
+		<li>flags are specified outside the  /characters, appear following the second slash</li>
+		<li><strong class="red"><em>i</em></strong> : specify pattern matching should be case insensitive</li>
+		<li><strong class="red"><em>g</em></strong> : specify pattern matching should be global</li>
+		<li><strong class="red"><em>m</em></strong> : specify pattern matching in multiline mode</li>
+	</ul>
+<pre class="code">
+<span class="code-explain">/\bJava\b/i</span>: Matched with "JAVA script", "java is fun"
+<span class="code-explain">/\bJava\b/i</span>: Matched with "java is a language. JAVA is not a scripting language" > 1 matche
+<span class="code-explain">/\bJava\b/gi</span>: Matched with "java is a language. JAVA is not a scripting language" > 2 matches
+<span class="code-explain">/\bJava\b/mi</span>: Matched with "java\nis a language
+</pre>
+
+<pre class="code">
+<img src="<c:url value="/resources/images/regexp-flat.png" />">
+</pre>
     </div>
 </div>

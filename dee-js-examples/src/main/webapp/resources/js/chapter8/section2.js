@@ -25,7 +25,8 @@ function exampleJS82_4() {
 	alert('"1 plus 2 equals 3".match(/(\d+)/g) = ' + "1 plus 2 equals 3".match(/\d+/));
 	alert('"1 plus 2 equals 3".match(/(\d+)/g) = ' + "1 plus 2 equals 3".match(/\d+/g));
 
-	var emailPattern = /(\w+)@(\w{2,10})(.(\w{2,5})){1,2}/;
+
+	var emailPattern = /(\w+)@(\w{2,10}).(\w{2,5})/;
 	var text = "nmdien61@gmail.com";
 	var matches = text.match(emailPattern);
 	if(matches != null) {

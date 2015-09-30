@@ -19,7 +19,7 @@
         <li><a href="<c:url value="/chapter6" />">Chapter 6</a> <em></em></li>
         <li><a href="<c:url value="/chapter7" />">Chapter 7</a> <em>DOM</em></li>
         <li><a href="<c:url value="/chapter8" />">Chapter 8</a> <em>Regular Expression</em></li>
-        <li><a href="<c:url value="/chapter9" />">Chapter 9</a> <em></em></li>
+        <li><a href="<c:url value="/chapter9" />">Chapter 9</a> <em>Core Javascript Reference</em></li>
     </ul>
     <hr>
 </body>

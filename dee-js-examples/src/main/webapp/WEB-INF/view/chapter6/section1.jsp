@@ -12,23 +12,51 @@ for(var p in window) {
 }
 <span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_1()">
 </pre>
+
+		<p class="title">Useful Properties and Methods of window</p>
+		<ul>
+			<li><span class="red">window.location</span>: <strong>Location Object</strong></li>
+			<li><span class="red">window.document/document</span>: <strong>Document Object</strong> - represents the content displayed in window</li>
+			<li>alert()</li>
+			<li>setTimeout()</li>
+			<li>setInterval()</li>
+		</ul>
+
 	
 
+
     	<p class="title">Timers</p>
+    	<ul>
+    		<li>setTimeout(f, ms)</li>
+    		<li>clearTimout(timoutlId)</li>
+    		<li>setInterval(f, ms)</li>
+    		<li>clearInterval(intervalId)</li>
+    	</ul>
 <pre class="code">
 function clock() {
 	var display = document.getElementById("clock_1");
 	display.innerText = (new Date()).toLocaleString();
 }
-
+</pre>
+<pre class="code">
 var intervalId = setInterval(clock, 1000);
 setTimeout(function() {
 	clearInterval(intervalId);
 }, 10000);
-
-Clock: <div id = "clock_1"></div>
-<span class="code-result">Result>  </span> <input value="check" type="button" onclick="exampleJS6_2()">
+<span class="code-result">Result> Clock: <span id = "clock_1"></span>  </span> <input value="check" type="button" onclick="exampleJS6_2()">
 </pre>
+
+	
+		<p class="title">Browser Location & Navigation</p>
+
+<pre class="code">
+	window.location === document.location; // True
+</pre>
+
+
+
+
+
 
 	<p class="title">Parsing URL</p>
 <pre class="code">

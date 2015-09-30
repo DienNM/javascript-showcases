@@ -17,11 +17,13 @@
     <p>RegExp is an object that describes pattern of characters</p>
 
     <ul>
-        <li><a href="#section1">Section 1</a> <em></em></li>
+        <li><a href="#section1">Section 1</a> <em>Defining Regular Expression</em></li>
+        <li><a href="#section2">Section 2</a> <em>String Methods for Pattern Matching</em></li>
     </ul>
     <hr>
     
     <%@ include file="section1.jsp" %>
+    <%@ include file="section2.jsp" %>
 
 </body>
 </html>

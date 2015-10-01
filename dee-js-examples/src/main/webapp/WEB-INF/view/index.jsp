@@ -16,10 +16,14 @@
         <li><a href="<c:url value="/chapter3" />">Chapter 3</a> <em>Array</em></li>
         <li><a href="<c:url value="/chapter4" />">Chapter 4</a> <em>Functions</em></li>
         <li><a href="<c:url value="/chapter5" />">Chapter 5</a> <em>Class & Module</em></li>
-        <li><a href="<c:url value="/chapter6" />">Chapter 6</a> <em></em></li>
+        <li><a href="<c:url value="/chapter6" />">Chapter 6</a> <em>Windows</em></li>
         <li><a href="<c:url value="/chapter7" />">Chapter 7</a> <em>DOM</em></li>
         <li><a href="<c:url value="/chapter8" />">Chapter 8</a> <em>Regular Expression</em></li>
         <li><a href="<c:url value="/chapter9" />">Chapter 9</a> <em>Core Javascript Reference</em></li>
+        <li><a href="<c:url value="/chapter10" />">Chapter 10</a> <em>Scriting Document</em></li>
+        <li><a href="<c:url value="/chapter11" />">Chapter 11</a> <em>Scriting CSS</em></li>
+        <li><a href="<c:url value="/chapter12" />">Chapter 12</a> <em>Handling Event</em></li>
+        <li><a href="<c:url value="/chapter13" />">Chapter 13</a> <em>Scripted HTTP</em></li>
     </ul>
     <hr>
 </body>

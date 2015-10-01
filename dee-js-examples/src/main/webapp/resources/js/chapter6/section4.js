@@ -11,9 +11,8 @@ function exampleJS64_1() {
 
 function exampleJS64_2() {
 	var windows = window.frames;
-	alert("Number of frames: " + frames.length);
-	console.log(windows);
+	alert("Number of frames: " + windows.length);
 
-	var window1 = frs["chapter1"];
-	console.log(window1.location.href);
+	alert(windows["chapter1"].location.href);
+	alert(windows.chapter2.location.href);
 }

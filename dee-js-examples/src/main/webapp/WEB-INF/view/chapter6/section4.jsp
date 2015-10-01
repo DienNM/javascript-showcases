@@ -25,6 +25,11 @@
 	 <iframe src="http://localhost:8080/js/chapter3" name="chapter3"></iframe>
 
 <pre class="code">
+var windows = window.frames;
+alert("Number of frames: " + windows.length);
+
+alert(windows["chapter1"].location.href);
+alert(windows.chapter2.location.href);
 <span class="code-result">Result>  </span> <input id="js64_openwindow" value="check" type="button" onclick="exampleJS64_2()">
 </pre>
 

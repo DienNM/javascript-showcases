@@ -10,6 +10,13 @@ h3 {
 	padding: 3px 10px;
 }
 
+h4 {
+	color: blue;
+	font-weight: bold;
+	background-color: #ddd;
+	padding: 3px 10px;
+}
+
 .code {
 	padding: 5px 10px;
 	border: 1px solid #009;
@@ -19,12 +26,18 @@ h3 {
 
 p.title {
 	font-weight: bold;
-	font-size: 1.3em;
+	font-size: 1.2em;
+	border: 1px solid #aaa;
+
+	padding: 2px 5px;
+	background: #dde;
+
+	width: inherit;
 }
 
 p.sub-title {
-	font-style: italic;
-	color: red;
+	color: blue;
+	text-indent: 50px;
 	font-size: 1.2em;
 }
 

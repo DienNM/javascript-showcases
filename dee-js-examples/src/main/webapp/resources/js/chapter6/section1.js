@@ -29,6 +29,21 @@ function exampleJS6_2() {
 }
 
 
+function exampleJS6_2_1() {
+	location.assign("http://google.com");
+}
+
+function exampleJS6_2_2() {
+	location.replace("http://google.com");
+}
+
+function exampleJS6_2_3() {
+	location.reload();
+	location = "#section1";
+}
+
+
+
 function exampleJS6_3() {
 	document.getElementById("w_location").innerText = window.location;
 	document.getElementById("d_location").innerText = document.location;
@@ -82,13 +97,4 @@ function exampleJS6_10() {
 	window.history.go(-1);
 	window.history.go(-1);
 	window.history.go(2);
-}
-
-function exampleJS6_11() {	
-
-	var win = window.open("http://domain.com/page1");
-     win = window.open("http://domain.com/page2");
-
-	document.getElementById("wn_appName").innerText = window.navigator.appName;
-	
 }

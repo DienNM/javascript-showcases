@@ -15,8 +15,8 @@
     <h2>Scripting Document</h2>
 
     <ul>
-        <li><a href="#section1">Section 1</a> <em></em></li>
-        <li><a href="#section2">Section 2</a> <em></em></li>
+        <li><a href="#section1">Section 1</a> <em>Selecting Document Elements</em></li>
+        <li><a href="#section2">Section 2</a> <em>Document Struture & Traversal</em></li>
         <li><a href="#section3">Section 3</a> <em></em></li>
         <li><a href="#section4">Section 4</a> <em></em></li>
         <li><a href="#section5">Section 5</a> <em></em></li>

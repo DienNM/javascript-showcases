@@ -12,7 +12,7 @@
 <body>
     
     <h1>Chapter 11</h1>
-    <h2>Scripting CSS</h2>
+    <h2>Handling Event</h2>
 
     <ul>
         <li><a href="#section1">Section 1</a> <em></em></li>

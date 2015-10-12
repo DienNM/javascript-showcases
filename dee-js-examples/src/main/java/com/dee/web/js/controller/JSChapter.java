@@ -65,4 +65,29 @@ public class JSChapter {
     public String getChapter10() {
         return "chapter10/index";
     }
+    
+    @RequestMapping(value = "/chapter11", method = RequestMethod.GET)
+    public String getChapter11() {
+        return "chapter11/index";
+    }
+    
+    @RequestMapping(value = "/chapter12", method = RequestMethod.GET)
+    public String getChapter12() {
+        return "chapter12/index";
+    }
+    
+    @RequestMapping(value = "/chapter13", method = RequestMethod.GET)
+    public String getChapter13() {
+        return "chapter13/index";
+    }
+    
+    @RequestMapping(value = "/chapter14", method = RequestMethod.GET)
+    public String getChapter14() {
+        return "chapter14/index";
+    }
+    
+    @RequestMapping(value = "/chapter15", method = RequestMethod.GET)
+    public String getChapter15() {
+        return "chapter15/index";
+    }
 }
